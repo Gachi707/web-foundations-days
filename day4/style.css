@@ -1,0 +1,103 @@
+:root {
+  --bg: #f4f6f8;
+  --card: #ffffff;
+  --text: #222222;
+  --border: #cccccc;
+  --accent: #0ba184;
+  --header: #8e0000;
+  --warning: #e67e00;
+  --danger: #d00000;
+}
+
+body.dark {
+  --bg: #121212;
+  --card: #1e1e1e;
+  --text: #f1f1f1;
+  --border: #555555;
+  --accent: #14c4a1;
+  --header: #4a0000;
+  --warning: #ffa733;
+  --danger: #ff5c5c;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+header {
+  background-color: var(--header);
+  color: white;
+  padding: 20px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+main {
+  max-width: 640px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+section {
+  background-color: var(--card);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background-color: var(--card);
+  color: var(--text);
+  font: inherit;
+  resize: vertical;
+}
+
+button {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+/* Character counter states: "over" comes last so it wins */
+.warning {
+  color: var(--warning);
+}
+
+.over {
+  color: var(--danger);
+  font-weight: bold;
+}
