@@ -1,6 +1,11 @@
 -- School database: students, courses and enrolments
 PRAGMA foreign_keys = ON;
 
+-- Start clean so the script can be re-run (children first)
+DROP TABLE IF EXISTS enrolments;
+DROP TABLE IF EXISTS courses;
+DROP TABLE IF EXISTS students;
+
 -- ---------- 1. Tables ----------
 CREATE TABLE students (
   id    INTEGER PRIMARY KEY,
